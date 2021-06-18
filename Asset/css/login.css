@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+
+/*Warna =
+C4F5DD
+C4F5DD
+7BF7BB
+5E756A
+3B7559
+*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+
+h1{font-size:50px; font-weight: bold; text-align: center;}
+
+.box-login{ 
+    border-radius:30px;
+    background: #7BF7BB;
+    width:500px;
+    padding:10px 40px;
+    margin: 100px auto;
+    border:1px solid #ddd;
+    box-shadow:2px 2px 20px #ddd;
+}
+
+body input{
+    padding:10px; 
+    border-radius:5px;
+    width:90%;
+    border:1px solid #ddd
+}
+
+body input:focus{border-color:#07acec;outline:none}
+
+body button{
+    background:#3B7559;
+    color:#fff;
+    border:none;
+    width: 100px;
+    font-weight: bold;
+    border-radius:30px;
+    padding:5px;
+    margin: auto 150px;
+}
+
+.line{
+    margin: -20px auto;
+    background-color: black;
+    height: 1px;
+    width: 75%;
+}
