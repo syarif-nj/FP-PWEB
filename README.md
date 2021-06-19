@@ -1,4 +1,4 @@
       -----PENTING----
-2. SEBELUM DI PUSH HARAP PULL TERLEBIH DAHULU
-3. Baca dokumentasi update terbaru
-4. Baca penambahan fitur terbaru
+1. SEBELUM DI PUSH HARAP PULL TERLEBIH DAHULU
+2. Baca dokumentasi update terbaru
+3. Baca penambahan fitur terbaru dan pelajari
