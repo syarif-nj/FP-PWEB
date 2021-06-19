@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
 
-body{
-    font-family: Poppins;
+h4{font-weight: bold;}
+
+h3{
+    font-stretch: expanded;
 }
 
-h4{
-    font-weight: bold;
+li{
+    list-style-type: none;
 }
 
 .list-style{
@@ -31,13 +33,12 @@ h4{
     border-color: #3B7559;
     width: 65%;
     height: auto;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 img{
     border: none;
-    border-radius: 9px 9px 0px 0px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px 10px 0px 0px;
 }
