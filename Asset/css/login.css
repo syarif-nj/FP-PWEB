@@ -9,11 +9,6 @@ C4F5DD
 3B7559
 */
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background: #fff;
-}
-
 h1{font-size:50px; font-weight: bold; text-align: center;}
 
 .box-login{ 
@@ -26,16 +21,16 @@ h1{font-size:50px; font-weight: bold; text-align: center;}
     box-shadow:2px 2px 20px #ddd;
 }
 
-body input{
-    padding:10px; 
+input{
+    padding:5px;
     border-radius:5px;
     width:90%;
-    border:1px solid #ddd
+    border:1px solid #ddd;
 }
 
-body input:focus{border-color:#07acec;outline:none}
+input:focus{border-color:#07acec;outline:none}
 
-body button{
+button{
     background:#3B7559;
     color:#fff;
     border:none;
@@ -43,12 +38,12 @@ body button{
     font-weight: bold;
     border-radius:30px;
     padding:5px;
-    margin: auto 150px;
+    margin: auto;
 }
 
 .line{
     margin: -20px auto;
     background-color: black;
-    height: 1px;
-    width: 75%;
+    height: 2px;
+    width: 70%;
 }

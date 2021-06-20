@@ -15,17 +15,10 @@ li{
     font-weight: bold; margin: 10px 20px; color: #3B7559;
 }
 .nav-hello{
-    background-color: blue;
-    background-image: url('/Asset/img/padi2.jpg');
+    background-image: url(../img/padi2.jpg);
     height: 70px;
 }
 
-.nav-dashboard{
-    background-color: chartreuse;
-    height: auto;
-    width: 100%;
-    margin: auto;
-}
 
 .box{
     border: 2px solid #3B7559;
@@ -35,7 +28,7 @@ li{
     height: auto;
 }
 
-img{
+.img{
     border: none;
     height: 100%;
     width: 100%;

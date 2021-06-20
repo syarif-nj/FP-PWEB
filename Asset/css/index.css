@@ -3,18 +3,22 @@
 body{
     font-family: 'Poppins', sans-serif;
     background: #fff;
-    position: relative;
-    min-height: 100vh;
+
 }
 
 h1{font-weight: bold;}
 
+/*
 .navbar{
     background-color: #3B7559;
     list-style-type: none;
     overflow:hidden;
     top: 0;
-    position:fixed;
     width:100%;
     z-index: 1;
+}*/
+
+
+a{
+    text-decoration: none;
 }
