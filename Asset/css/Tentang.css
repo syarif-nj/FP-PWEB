@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #5e756a;
+}
+
+.jumbotron {
+  padding-top: 2rem;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.col {
+  text-align: center;
+}
+
+.Team {
+  background-color: #c4f5dd;
+}
+
+h6 {
+  font-style: italic;
+}
