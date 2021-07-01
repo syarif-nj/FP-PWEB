@@ -12,15 +12,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-let nama = '';
-let alamat = '';
-let notlp ='';
-
-function send(nama, uid, alamat, notlp,){
-  let newform = firebase.database().ref(user).push();
-  newform.set({nama : nama, uid : uid, alamat:alamat, notlp:notlp});
-}
-
 function login(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -72,5 +63,46 @@ function logout() {
   })
 }
 
-function prosesmasuk(){ window.location.href='./login.html';}
-function prosesdaftar(){ window.location.href='./register.html';}
+var database = firebase.database();
+var key = 0;
+
+database.ref("produk").orderByKey().limitToLast(1).on('child_added',function(data) {
+  key = parseInt(data.key, 10);
+  key = key + 1;
+});
+
+function posting(){
+    if(key == 0){
+    key = 1;
+    }
+
+  var kategori = document.getElementById('kategori').value;
+  //var uid = user.uid;
+  //var email = user.email;
+  database.ref('produk/' + key).set({
+    //uid : uid,
+    nama  : $('#nama').val(),
+    kategori   : kategori,
+    stok : $('#notlp').val(),
+    harga : $('#alamat').val(),
+    deskripsi : $('#deskripsi').val()
+  });
+
+  alert("Data Berhasil ditambah");
+  /*}else if($('#exampleModalLabel').text() == "Ubah Data"){
+  database.ref('users/' + $('#id').val()).update({
+    username: $('#nama').val(),
+    email   : $('#email').val(),
+    address : $('#alamat').val()
+   });
+   alert("Data Berhasil diupdate");
+  }*/
+}
+
+function tampil(){
+  var pilih = document.getElementById('kategori');
+  var kategori = pilih.options[pilih.selectedIndex].value;
+
+  var kategori2 = document.getElementById('kategori').value;
+  alert(kategori2);
+}
