@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* ASSET WARNA
+#5E756A
+#7BF7BB
+#C4F5DD
+#3B7559
+#9BC2AF */
+
+/* style default */
+body {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #5e756a;
+}
+
+nav {
+  color: #c4f5dd;
+}
+
+/* akhir style default */
+
+.Belanja {
+  padding-top: 10px;
+}
+
+.Kategori {
+  padding-top: 1rem;
+  margin: 10px;
+  height: 79%;
+  width: 20%;
+  font-size: 14px;
+  float: left;
+  z-index: 2;
+  background-color: white;
+  color: #5e756a;
+  border-style: solid;
+  border-color: #9dbaac;
+  border-width: 0.5px;
+  border-radius: 15px;
+}
+
+.Kategori h4 {
+  padding-left: 15%;
+  font-weight: 700;
+}
+
+.Kategori ul li {
+  list-style-type: none;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.Kategori ul li a {
+  color: #5e756a;
+  text-decoration: none;
+}
+
+.Kategori ul li i {
+  color: #9dbaac;
+}
+
+.Kategori ul li a:hover {
+  color: #c4f5dd;
+}
+
+/* FORM */
+
+form {
+  width: auto;
+  margin: 10px 10px;
+}
+
+.cari {
+  width: 90%;
+  padding: 8px 15px;
+  background-color: white;
+  border: 1px solid;
+  border-color: #a9c2b6;
+  border-radius: 15px;
+}
+
+.tombol {
+  width: 9%;
+  padding: 8px 15px;
+  background-color: white;
+  border: 1px solid;
+  border-color: #a9c2b6;
+  border-radius: 10px;
+}
+
+/* PRODUK */
+.card {
+  margin: 10px 10px;
+  color: #5e756a;
+  border-style: solid;
+  border-color: #9dbaac;
+  border-radius: 15px;
+}
+
+.card img {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card h6 {
+  font-weight: 700;
+}
+
+.card p {
+  color: #7e9188;
+}
+
+.card .btn {
+  font-weight: 700;
+  text-shadow: #7bf7bb;
+  outline-color: #7bf7bb;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 1000px) {
+  .Kategori {
+    border: none;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cari {
+    width: auto;
+  }
+  .tombol {
+    width: auto;
+  }
+}
