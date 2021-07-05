@@ -63,7 +63,6 @@ firebase.auth().onAuthStateChanged(function (user) {
       key = parseInt(data.key, 10);
       key = key + 1;
      });
-     
      content += '</tbody>';
      $('#tbl_list').append(content);
     }else{
@@ -208,4 +207,15 @@ function cleardata(){
   $('#file').val("");
 }
 
+function hapusData(id){
+
+firebase.auth().onAuthStateChanged(function (user) {
+  var uid = firebase.auth().currentUser.uid;
+  var answer = confirm("Hapus Data..?");
+  if (answer) {
+      database.ref('produkuser/' + uid+'/'+id).remove();
+      alert("Data Berhasil dihapus");
+  }
+});
+}
 
