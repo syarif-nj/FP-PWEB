@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Asset/css/dashboard.css">
-    <link rel="stylesheet" href="./Asset/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./Asset/css/dashboard.css" />
+    <link rel="stylesheet" href="./Asset/css/index.css" />
     <link rel="icon" href="./Asset/img/logoBG.svg" />
 
     <title>Berlim | Tambahkan Produk</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #3b7559; color: #c4f5dd">
-        <div class="container">
-            <!-- navbar-brand href nya diarahkan ke landing page/index.html -->
-            <a class="navbar-brand" href="#">
-                <img src="./Asset/img/logo.svg" alt="Logo" width="120" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav" style="font-weight: 600">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cari tahu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Belanja.html">Belanja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Partner</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tentang.html">Tentang Kami</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <ul class="navbar-nav ms-lg-auto">
-                        <li class="nav-item">
-                            <button class="btn btn-outline-light " style="margin: auto 10px;"
-                            type="button" onclick="prosesmasuk()">
-                                Masuk
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-light btn-secondary"
-                            type="button" onclick="prosesdaftar()">
-                                Daftar
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <!-- navbar-brand href nya diarahkan ke landing page/index.html -->
+        <a class="navbar-brand" href="index.html">
+          <img src="./Asset/img/logo.svg" alt="Logo" width="120" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="font-weight: 600">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cari tahu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Belanja.html">Belanja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Partner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tentang.html">Tentang Kami</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item">
+                <button class="btn btn-outline-light" style="margin: auto 10px" type="button" onclick="prosesmasuk()">Masuk</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-light btn-secondary" type="button" onclick="prosesdaftar()">Daftar</button>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
 
-
-
     <section>
-        <div  class=" nav-hello"><br>
-            <div class="container">
-                <h3>Hai, <span id="isihai"></span></h3>
-            </div>
+      <div class="nav-hello">
+        <br />
+        <div class="container">
+          <h3>Hai, <span id="isihai"></span></h3>
         </div>
-        <div class="container-fluid">
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <div>
+              <ul class="list-group">
+                <li>
+                  <a href="dashboard.html"><p class="list-style">Dashboard</p></a>
+                </li>
+                <li>
+                  <a href="tambahProduk.html"><p class="list-style">Tambahkan Produk</p></a>
+                </li>
+                <li>
+                  <button class="border border-0" onclick="logout()"><p class="list-style">Logout</p></button>
+                </li>
+                <br /><br />
+              </ul>
+            </div>
+          </div>
+          <div class="col">
             <div class="row">
-                <div class="col-sm-3">
-                    <div>
-                        <ul  class="list-group">
-                            <li ><a href="dashboard.html"><p class="list-style">Dashboard</p></a></li>
-                            <li ><a href="tambahProduk.html"><p class="list-style">Tambahkan Produk</p></a></li>
-                            <li ><button class="border border-0" onclick="logout()"><p class="list-style">Logout</p></button></li><br><br>
-                        </ul>
-                    </div>
+              <div class="col">
+                <div class="border border-3 border-top-0 border-end-0 border-start-0 border-dark">
+                  <br />
+                  <h4>Menambahkan Produk</h4>
                 </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <div class="border border-3 border-top-0 border-end-0 border-start-0 border-dark">
-                                <br><h4>Menambahkan Produk</h4>
-                            </div><br>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <form action="" style="margin: 10px;">
-                                <label for="nama">Nama Produk</label><br>
-                                <input type="text" class="form-control" id="nama"><br>
-                                <label for="kategoti">Kategori</label><br>
-                                <select aria-label="Default select example" id="kategori">
-                                    <option selected> </option>
-                                    <option value="kecantikan">Kecatikan</option>
-                                    <option value="pembersih">Pembersih</option>
-                                    <option value="Kesehatan">Kesehatan</option>
-                                    <option value="Anak-anak">Anak-anak</option>
-                                    <option value="Dapur">Dapur</option>
-                                    <option value="Tas">Tas</option>
-                                    <option value="Pakaian">Pakaian</option>
-                                    <option value="Makanan">Makanan</option>
-                                    <option value="Minuman">Minuman</option>
-                                </select><br><br>
-                                <label for="harga">Harga</label>
-                                <input type="number" id="harga" class="form-control"><br>
-                                <label for="deskripsi">Deskripsi</label>
-                                <textarea name="" id="deskripsi" rows="4" class="form-control"></textarea><br>
-                                <label for="gambar">Gambar Produk</label>
-                                <input type="file" id="file" class="form-control"><br>
-                                <button type="button" onclick="posting()" class="btn btn-success">Post</button>
-                            </form>
-                            <br><br><br><br>
-                        </div>
-                        <div class="col">
-                            <div class="border border-3" style="margin: 20px;">
-                                <div style="margin : auto 10px">
-                                    <!--
+                <br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <form action="" style="margin: 10px">
+                  <label for="nama">Nama Produk</label><br />
+                  <input type="text" class="form-control" id="nama" /><br />
+                  <label for="kategoti">Kategori</label><br />
+                  <select aria-label="Default select example" id="kategori">
+                    <option selected></option>
+                    <option value="kecantikan">Kecatikan</option>
+                    <option value="pembersih">Pembersih</option>
+                    <option value="Kesehatan">Kesehatan</option>
+                    <option value="Anak-anak">Anak-anak</option>
+                    <option value="Dapur">Dapur</option>
+                    <option value="Tas">Tas</option>
+                    <option value="Pakaian">Pakaian</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option></select
+                  ><br /><br />
+                  <label for="harga">Harga</label>
+                  <input type="number" id="harga" class="form-control" /><br />
+                  <label for="deskripsi">Deskripsi</label>
+                  <textarea name="" id="deskripsi" rows="4" class="form-control"></textarea><br />
+                  <label for="gambar">Gambar Produk</label>
+                  <input type="file" id="file" class="form-control" /><br />
+                  <button type="button" onclick="posting()" class="btn btn-success">Post</button>
+                </form>
+                <br /><br /><br /><br />
+              </div>
+              <div class="col">
+                <div class="border border-3" style="margin: 20px">
+                  <div style="margin: auto 10px">
+                    <!--
                                     <div class="row">
                                         <center><p>Detail Akun</p></center>
                                     </div>
@@ -139,38 +140,44 @@
                                             <p>: <span id="isiemail"></span></p>
                                         </div>
                                     </div>-->
-                                    <table width="95%">
-                                        <tr>
-                                            <th colspan="3"><center><h3>Detail Akun</h3></center></th>
-                                        </tr>
-                                        <tr>
-                                            <th><h5>Nama </h5></th><th><h5>:</h5></th>
-                                            <th><h5 id="isinama"></h5></th>
-                                        </tr>
-                                        <tr>
-                                            <th><h5>Alamat</h5></th><th><h5>:</h5></th>
-                                            <th><h5 id="isialamat"></h5></th>
-                                        </tr>
-                                        <tr>
-                                            <th><h5>Phone</h5></th><th><h5>:</h5></th>
-                                            <th><h5 id="isinotlp"></h5></th>
-                                        </tr>
-                                        <tr>
-                                            <th><h5>Email</h5></th><th><h5>:</h5></th>
-                                            <th><h5 id="isiemail"></h5></th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table width="95%">
+                      <tr>
+                        <th colspan="3">
+                          <center><h3>Detail Akun</h3></center>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th><h5>Nama</h5></th>
+                        <th><h5>:</h5></th>
+                        <th><h5 id="isinama"></h5></th>
+                      </tr>
+                      <tr>
+                        <th><h5>Alamat</h5></th>
+                        <th><h5>:</h5></th>
+                        <th><h5 id="isialamat"></h5></th>
+                      </tr>
+                      <tr>
+                        <th><h5>Phone</h5></th>
+                        <th><h5>:</h5></th>
+                        <th><h5 id="isinotlp"></h5></th>
+                      </tr>
+                      <tr>
+                        <th><h5>Email</h5></th>
+                        <th><h5>:</h5></th>
+                        <th><h5 id="isiemail"></h5></th>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="text-center pb-2 pt-3" style="background-color: #3b7559; color: #c4f5dd">
-        <p>Created with smile by Berlim Team</p>
+      <p>Created with smile by Berlim Team</p>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -184,5 +191,5 @@
 
     <script src="./Asset/js/index.js"></script>
     <script src="./Asset/js/dashboard.js"></script>
-</body>
+  </body>
 </html>
