@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./Asset/css/index.css">
     <link rel="stylesheet" href="./Asset/css/dashboard.css">
     <link rel="icon" href="./Asset/img/logoBG.svg">
-    <title>Berlin</title>
+    <title>Berlim</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #3b7559; color: #c4f5dd">
@@ -59,9 +59,11 @@
 
 
     <section>
-        <nav  class="nav-hello"><br>
-            <h3><span class="shadow-lg">hai, Syarif</span></h3>
-        </nav>
+        <div  class="nav-hello"><br>
+            <div class="container">
+                <h3>Hai, <span id="isihai"></span></h3>
+                </div>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3">
@@ -69,7 +71,7 @@
                         <ul class="list-group">
                             <li ><a href="dashboard.html"><p class="list-style">Dashboard</p></a></li>
                             <li ><a href="tambahProduk.html"><p class="list-style"> Tambahkan Produk</p></a></li>
-                            <button class="btn border-0" style="width: 100px;"><p class="list-style" onclick="logout()">Logout</p></button>
+                            <li ><button class="border border-0" onclick="logout()"><p class="list-style">Logout</p></button></li><br><br>
                         </ul>
                     </div>
                 </div>
@@ -82,22 +84,22 @@
                         </div>
                     </div>
                     <div class="row" >
-                        <div class="col">
-                            <div class="box">
+                        <div id="kolom-isi" class="col">
+                            <div id="isibox" class="box">
                                 <table>
                                     <tr>
                                         <td>
-                                            <img class="img" src="./Asset/img/produk1.jpg">
+                                            <img id="imgp1" class="img" src="./Asset/img/noimg.png">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><p>Sedotan Bambu (set)</p></td>
+                                        <td><p id="namap1"></p></td>
                                     </tr>
                                     <tr>
-                                        <td><p>Rp 35.000</p></td>
+                                        <td><p>Rp.<span id="harga1"></span></p></td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td><!--
                                             <div class="d-flex justify-content-end">
                                                 <button class="btn btn-outline-danger border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="proseshapus()">
@@ -105,7 +107,7 @@
                                                 <button class="btn btn-outline-success border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="prosesdetail()">
                                                     Detail</button>
-                                            </div>
+                                            </div>-->
                                         </td>
                                     </tr>
                                 </table>
@@ -117,18 +119,18 @@
                                     <tr>
                                         <td>
                                             <div style="margin: auto auto 5px auto;">
-                                                <img class="img" src="./Asset/img/produk2.jpg">
+                                                <img class="imgp2" src="./Asset/img/noimg.png">
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><p>Sedotan Bambu (set)</p></td>
+                                        <td><p id="namap2"></p></td>
                                     </tr>
                                     <tr>
-                                        <td><p>Rp 35.000</p></td>
+                                        <td><p>Rp. <span id="harga2"></span></p></td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td><!--
                                             <div class="d-flex justify-content-end">
                                                 <button class="btn btn-outline-danger border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="proseshapus()">
@@ -136,7 +138,7 @@
                                                 <button class="btn btn-outline-success border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="prosesdetail()">
                                                     Detail</button>
-                                            </div>
+                                            </div>-->
                                         </td>
                                     </tr>
                                 </table>
@@ -147,29 +149,44 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <img class="img" src="./Asset/img/produk2.jpg">
+                                            <img class="imgp3" src="./Asset/img/noimg.png">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><p>Sedotan Bambu (set)</p></td>
+                                        <td><p id="namap3"></p></td>
                                     </tr>
                                     <tr>
-                                        <td><p>Rp 35.000</p></td>
+                                        <td><p>Rp. <span id="harga3"></span></p></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div class="d-flex justify-content-end">
+                                            <!--<div class="d-flex justify-content-end">
                                                 <button class="btn btn-outline-danger border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="proseshapus()">
                                                     Hapus</button>
                                                 <button class="btn btn-outline-success border rounded-pill"
                                                 type="button" style="margin: auto 5px;" onclick="prosesdetail()">
                                                     Detail</button>
-                                            </div>
+                                            </div>-->
                                         </td>
                                     </tr>
                                 </table>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <table class="table table-striped" id="tbl_list">
+                                <thead>
+                                 <tr>
+                                  <th scope="col">No.</th>
+                                  <th scope="col">Nama Produk</th>
+                                  <th scope="col">Kategori</th>
+                                  <th scope="col">Harga</th>
+                                  <th scope="col">Aksi</th>
+                                 </tr>
+                                </thead>
+                               </table>
                         </div>
                     </div>
                 </div>
@@ -177,19 +194,19 @@
         </div>
     </section><br><br><br><br>
 
-    <footer class="text-center pb-2 pt-3" style="background-color: #3b7559; color: #c4f5dd">
+    <footer class="text-center container-fluid bottom-0 pt-5" style="background-color: #3b7559; color: #c4f5dd">
         <p>Created with smile by Berlim Team</p>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <script src="./Asset/js/index.js"></script>
-    <script src="./Asset/js/login.js"></script>
 </body>
 </html>

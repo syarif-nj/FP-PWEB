@@ -41,6 +41,30 @@
   </thead>
  </table>
 
+ <div id="isibox" class="box">
+   <table>
+  <thead>
+      <tr>
+          <td>
+          </td>
+      </tr>
+      <tr><td></td>
+      </tr>
+      <tr><td></td>
+      </tr>
+      <tr>
+          <td>
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-outline-danger border rounded-pill"
+                  type="button" style="margin: auto 5px;" onclick="proseshapus()">
+                      Hapus</button>
+              </div>
+          </td>
+      </tr>
+  </thead>
+  </table>
+</div>
+
 
  <!-- Modal -->
  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -89,35 +113,65 @@
   var database = firebase.database();
   var key = 0;
 
-  database.ref("users").orderByKey().limitToLast(1).on('child_added',function(data) {
+  database.ref("produkuser/3Dx8DxRVara0bJ0gTJvuFWHOYWI3").orderByKey().limitToLast(1).on('child_added',function(data) {
    key = parseInt(data.key, 10);
    key = key + 1;
   });
 
-  database.ref('users').on('value', function(snapshot) {
+  database.ref('produkuser/3Dx8DxRVara0bJ0gTJvuFWHOYWI3').on('value', function(snapshot) {
    var count = 0;
+   console.log(snapshot.val());
    if(snapshot.exists()){
-    $("#tbl_list_user tbody").remove(); 
+    $("#tbl_list_user tbody").remove();
     var content = '<tbody>';
     snapshot.forEach(function(data) {
      count+=1;
      var val = data.val();
+     console.log(val);
                  content +='<tr>';
                  content += '<td>' + count + '</td>';
-                 content += '<td>' + val.username + '</td>';
-                 content += '<td>' + val.email + '</td>';
-                 content += '<td>' + val.address + '</td>';
+                 content += '<td>' + val.nama + '</td>';
+                 content += '<td>' + val.harga + '</td>';
+                 content += '<td>' + val.kategori + '</td>';
                  content += '<td> <button class="btn btn-danger" onclick="hapusData(' + data.key + ')"> Hapus Data </button> <button class="btn btn-primary tampilModalUbah" onclick="setData('+ data.key +')" data-toggle="modal" data-target="#exampleModal">Edit Data</button>  </td>';
                  content +='</tr>';
                  key = 0;
      key = parseInt(data.key, 10);
      key = key + 1;
     });
-
+    
     content += '</tbody>';
     $('#tbl_list_user').append(content);
    }else{
-    $("#tbl_list_user tbody").remove(); 
+    $("#tbl_list_user tbody").remove();
+   }
+  });
+
+  database.ref('produkuser/3Dx8DxRVara0bJ0gTJvuFWHOYWI3').on('value', function(snapshot) {
+   var count = 0;
+   console.log(snapshot.val());
+   if(snapshot.exists()){
+    $("#isibox").remove();
+    var content = '<tbody>';
+    snapshot.forEach(function(data) {
+     count+=1;
+     var val = data.val();
+     console.log(val);
+                 content +='<thead>';
+                 content += '<tr><td>' + count + '</td></tr>';
+                 content += '<tr><td>' + val.nama + '</td></tr>';
+                 content += '<tr><td>' + val.harga + '</td></tr>';
+                 content += '<tr><td>' + val.kategori + '</td></tr>';
+                 content += '<tr><td> <button class="btn btn-danger" onclick="hapusData(' + data.key + ')"> Hapus Data </button> </td></tr>';
+                 content +='</thead>';
+                 key = 0;
+     key = parseInt(data.key, 10);
+     key = key + 1;
+    });
+    content += '</tbody>';
+    $('#tbl_list_user').append(content);
+   }else{
+    $("#tbl_list_user tbody").remove();
    }
   });
 
@@ -128,7 +182,7 @@
      key = 1;
     }
 
-    database.ref('users/' + key).set({
+    database.ref('user/' + key).set({
      username: $('#nama').val(),
      email   : $('#email').val(),
      address : $('#alamat').val()
@@ -136,14 +190,14 @@
 
     alert("Data Berhasil ditambah");
    }else if($('#exampleModalLabel').text() == "Ubah Data"){
-    database.ref('users/' + $('#id').val()).update({
+    database.ref('user/' + $('#id').val()).update({
      username: $('#nama').val(),
      email   : $('#email').val(),
      address : $('#alamat').val()
     });
     alert("Data Berhasil diupdate");
    }
-  } 
+  }
 
 
   function cleardata(){
@@ -156,7 +210,7 @@
 
   function setData(id){
    $('#exampleModalLabel').html('Ubah Data');
-   database.ref('users/').child(id).once('value').then( function(snap) {
+   database.ref('user/').child(id).once('value').then( function(snap) {
        const user = snap.val()
        $('#id').val(id);
     $('#nama').val(user.username);
@@ -169,10 +223,10 @@
   function hapusData(id){
    var answer = confirm("Hapus Data..?");
    if (answer) {
-       database.ref('users/' + id).remove();
+       database.ref('user/' + id).remove();
        alert("Data Berhasil dihapus");
    }
-  } 
+}
 
 $('.btnTambahData').on('click', function(){
         $('#exampleModalLabel').html('Tambah Data Baru');

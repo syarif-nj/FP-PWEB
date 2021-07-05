@@ -35,7 +35,7 @@ firebase.initializeApp(firebaseConfig);
              
             alert('berhasil regis');
             
-            cleardata();             
+            cleardata();
             }
 
                 function cleardata(){

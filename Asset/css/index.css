@@ -22,3 +22,7 @@ h1{font-weight: bold;}
 a{
     text-decoration: none;
 }
+
+footer{
+    bottom: 0px;
+}

@@ -1,0 +1,117 @@
+.banner {
+    font-family: Poppins;
+    font-style: italic;
+    font-size: 60px;
+    color: #5E756A;
+    line-height: 100px
+}
+
+.banner img {
+    margin-top: -200px;
+    margin-right: -200px;
+}
+
+.description .container .row .col .text {
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+section .container .bulat img {
+    padding-right: 300px;
+}
+
+.bintang .container .bintang img {
+    padding-left: 300px;
+    padding-top: 20px;
+}
+
+.manfaat .judul h2 {
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 52px;
+    margin-right: -250px;
+}
+
+.manfaat .container .text .col-8 .lingkaran {
+    width: 240px;
+    height: 160px;
+    background: #7BF7BB;
+    border-radius: 100%;
+    margin-left: 150px;
+    margin-top: -200px;
+    margin-bottom: -100px;
+}
+
+.manfaat .container .text .col-8 .lingkaran p {
+    padding-top: 25px;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 60px;
+    color: #000000;
+}
+
+.manfaat .container .text .col-4 .lingkaran {
+    width: 240px;
+    height: 160px;
+    background: #7BF7BB;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-top: 150px;
+}
+
+.manfaat .container .text .col-4 .lingkaran p {
+    padding-top: 35px;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 60px;
+    color: #000000;
+}
+
+.manfaat .container .text .col-4 img {
+    margin-top: 200px;
+}
+
+.manfaat .container .text .col-8 .hemat {
+    margin-top: 50px;
+}
+
+.manfaat .container .text .col-8 .gambar .satu {
+    margin-left: -100px;
+}
+
+.manfaat .container .text .col-8 .gambar .dua {
+    margin-top: 200px;
+}
+
+footer {
+    height: 294px;
+    background: #3B7559;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    color: #C4F5DD;
+}
+
+footer .container .footer {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: justify;
+    color: #C4F5DD;
+    position: absolute;
+    bottom: 0px;
+}
