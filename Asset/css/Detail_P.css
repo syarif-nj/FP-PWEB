@@ -39,6 +39,10 @@ nav {
   border-width: 1px;
 }
 
+.ket {
+  text-align: justify;
+}
+
 .nama {
   padding: 10px;
   width: max-content;
